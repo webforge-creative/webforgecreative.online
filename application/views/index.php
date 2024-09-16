@@ -42,7 +42,7 @@
 
   <!-- Optimized Title for SEO and Click-Through Rate -->
   <title>WebForge Creative | Custom Web Development & Design</title>
-  
+
   <!-- Google Tag Manager -->
   <script src="https://www.googletagmanager.com/gtm.js?id=GTM-P2DVGCW2" defer></script>
   <!-- End Google Tag Manager -->
@@ -64,15 +64,18 @@
   <meta name="twitter:image" content="https://www.webforgecreative.online/assets/images/og-image.jpg">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MY32D0KFEN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY32D0KFEN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-MY32D0KFEN');
-</script>
-  
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-MY32D0KFEN');
+  </script>
+
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
     {
@@ -90,8 +93,8 @@
   </script>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
-  <link rel="stylesheet" href="<?= base_url()?>assets/css/fontawesome.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/css/fontawesome.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -101,37 +104,46 @@
     ::-webkit-scrollbar {
       width: 12px;
     }
+
     ::-webkit-scrollbar-track {
       background: #f5f5f5;
       border-radius: 10px;
     }
+
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(180deg, #9b26f0, #cd2ee5);
       border-radius: 10px;
       border: 3px solid transparent;
       background-clip: padding-box;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(180deg, #cd2ee5, #9b26f0);
     }
+
     .logo {
       width: 16rem;
     }
+
     .logo-fix-1 {
       margin-bottom: -5rem !important;
     }
+
     .logo-fix {
       margin-top: -6rem !important;
     }
+
     @media (max-width: 768px) {
       .logo {
         width: 7rem;
         margin: -25px 0px;
         content: url('assets/images/logo-2.png');
       }
+
       .logo-fix-1 {
         margin-bottom: 0 !important;
       }
+
       .logo-fix {
         margin-top: 0 !important;
       }
@@ -147,7 +159,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top logo-fix">
     <div class="container logo-fix-1">
       <a class="navbar-brand" href="https://www.webforgecreative.online">
-        <img src="<?= base_url()?>assets/images/logo.png" class="logo" alt="Webforge Creative logo">
+        <img src="<?= base_url() ?>assets/images/logo.png" class="logo" alt="Webforge Creative logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +208,7 @@
         <!-- START THE CONTENT FOR THE VIDEO -->
         <div class="col-md-6 intros text-end">
           <div class="video-box">
-            <img src="<?= base_url()?>assets/images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
             <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
               <span>
                 <i class="fas fa-play-circle"></i>
@@ -231,32 +243,32 @@
       <div class="row">
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-1.png" alt="Campany 1 logo" title="Campany 1 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-1.png" alt="Campany 1 logo" title="Campany 1 Logo" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-2.png" alt="Campany 2 logo" title="Campany 2 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-2.png" alt="Campany 2 logo" title="Campany 2 Logo" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-3.png" alt="Campany 3 logo" title="Campany 3 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-3.png" alt="Campany 3 logo" title="Campany 3 Logo" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-4.png" alt="Campany 4 logo" title="Campany 4 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-4.png" alt="Campany 4 logo" title="Campany 4 Logo" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-5.png" alt="Campany 5 logo" title="Campany 5 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-5.png" alt="Campany 5 logo" title="Campany 5 Logo" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
           <div class="campanies__logo-box shadow-sm">
-            <img src="<?= base_url()?>assets/images/campanies/campany-6.png" alt="Campany 6 logo" title="Campany 6 Logo" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/campanies/campany-6.png" alt="Campany 6 logo" title="Campany 6 Logo" class="img-fluid">
           </div>
         </div>
       </div>
@@ -316,7 +328,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="<?= base_url()?>assets/images/services/service-1.png" alt="marketing illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-1.png" alt="marketing illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -324,7 +336,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
           <div class="services__pic">
-            <img src="<?= base_url()?>assets/images/services/service-2.png" alt="web development illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-2.png" alt="web development illustration" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
@@ -362,7 +374,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="<?= base_url()?>assets/images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -411,7 +423,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url()?>assets/images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -440,7 +452,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url()?>assets/images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -469,7 +481,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url()?>assets/images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -613,7 +625,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-1.jpg" alt="portfolio 1 image" title="portfolio 1 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-1.jpg" alt="portfolio 1 image" title="portfolio 1 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -625,7 +637,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-2.jpg" alt="portfolio 2 image" title="portfolio 2 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-2.jpg" alt="portfolio 2 image" title="portfolio 2 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -637,7 +649,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-3.jpg" alt="portfolio 3 image" title="portfolio 3 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-3.jpg" alt="portfolio 3 image" title="portfolio 3 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -649,7 +661,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-4.jpg" alt="portfolio 4 image" title="portfolio 4 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-4.jpg" alt="portfolio 4 image" title="portfolio 4 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -661,7 +673,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-5.jpg" alt="portfolio 5 image" title="portfolio 5 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-5.jpg" alt="portfolio 5 image" title="portfolio 5 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -673,7 +685,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-6.jpg" alt="portfolio 6 image" title="portfolio 6 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-6.jpg" alt="portfolio 6 image" title="portfolio 6 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -685,7 +697,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-7.jpg" alt="portfolio 7 image" title="portfolio 7 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-7.jpg" alt="portfolio 7 image" title="portfolio 7 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -697,7 +709,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-8.jpg" alt="portfolio 8 image" title="portfolio 8 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-8.jpg" alt="portfolio 8 image" title="portfolio 8 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -709,7 +721,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="portfolio-box shadow">
-            <img src="<?= base_url()?>assets/images/portfolio/portfolio-9.jpg" alt="portfolio 9 image" title="portfolio 9 picture"
+            <img src="<?= base_url() ?>assets/images/portfolio/portfolio-9.jpg" alt="portfolio 9 image" title="portfolio 9 picture"
               class="img-fluid">
             <div class="portfolio-info">
               <div class="caption">
@@ -934,13 +946,13 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2DVGCW2"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2DVGCW2"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 
-  <!-- <script src="<?= base_url()?>assets/vendors/js/glightbox.min.js"></script> -->
+  <!-- <script src="<?= base_url() ?>assets/vendors/js/glightbox.min.js"></script> -->
 
   <!-- <script type="text/javascript">
       const lightbox = GLightbox({
@@ -953,7 +965,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }); 
     
     </script> -->
-  <script src="<?= base_url()?>assets/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
