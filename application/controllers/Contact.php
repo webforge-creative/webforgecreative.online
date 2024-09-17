@@ -8,6 +8,10 @@ class Contact extends CI_Controller {
         $this->load->library('email');  // Load the email library
     }
 
+    public function test(){
+        echo "hello";
+    }
+
     public function submit_ajax() {
         // Collect form data
         $first_name = $this->input->post('first_name');
