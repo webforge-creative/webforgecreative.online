@@ -946,7 +946,7 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
-  <a href="https://wa.me/+923113633344" class="shadow btn-primary rounded-circle back-to-top" target="_blank" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/+923113633344" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
