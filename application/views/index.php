@@ -994,8 +994,8 @@
           dataType: 'json',
           success: function(response) {
             if (response.status === 'success') {
-              $('#statusMessage').html('<div class="alert alert-success">Message sent successfully!</div>');
-              $('#contactForm')[0].reset(); // Clear the form
+              // Redirect to another page after successful form submission
+              window.location.href = 'https://www.webforgecreative.online/';
             } else {
               $('#statusMessage').html('<div class="alert alert-danger">Error: ' + response.message + '</div>');
             }
