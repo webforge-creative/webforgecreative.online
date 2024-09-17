@@ -769,18 +769,18 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">Initiate Your Project</h4>
-            <form action="send_email.php" method="POST" class="row">
+            <form id="contactForm" class="row">
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" name="first_name" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+                <input type="text" name="first_name" id="inputFirstName" placeholder="First Name" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" name="last_name" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+                <input type="text" name="last_name" id="inputLastName" placeholder="Last Name" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <input type="email" name="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg">
+                <input type="email" name="email" id="inputEmail" placeholder="Email Address" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+                <textarea name="message" id="message" placeholder="Message" rows="8" class="shadow form-control form-control-lg"></textarea>
               </div>
               <div class="text-center d-grid mt-1">
                 <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
@@ -789,37 +789,9 @@
                 </button>
               </div>
             </form>
-            <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-              // Get form data
-              $firstName = htmlspecialchars($_POST['first_name']);
-              $lastName = htmlspecialchars($_POST['last_name']);
-              $email = htmlspecialchars($_POST['email']);
-              $message = htmlspecialchars($_POST['message']);
 
-              // Set the recipient email address
-              $to = 'webforgecreative@gmail.com';
+            <div id="statusMessage"></div> <!-- Display success/failure message -->
 
-              // Set the email subject
-              $subject = 'Contact Form Submission';
-
-              // Create the email body
-              $body = "First Name: $firstName\n";
-              $body .= "Last Name: $lastName\n";
-              $body .= "Email: $email\n";
-              $body .= "Message:\n$message";
-
-              // Set email headers
-              $headers = "From: $email";
-
-              // Send the email
-              if (mail($to, $subject, $body, $headers)) {
-                echo 'Thank you for your message. It has been sent.';
-              } else {
-                echo 'Sorry, something went wrong. Please try again.';
-              }
-            }
-            ?>
           </div>
         </div>
       </div>
@@ -996,6 +968,42 @@
     
     </script> -->
   <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Capture form data
+        var formData = {
+          first_name: $('#inputFirstName').val(),
+          last_name: $('#inputLastName').val(),
+          email: $('#inputEmail').val(),
+          message: $('#message').val()
+        };
+
+        // Perform AJAX request
+        $.ajax({
+          url: '<?php echo site_url("contact/submit_ajax"); ?>', // Controller URL
+          type: 'POST',
+          data: formData,
+          dataType: 'json',
+          success: function(response) {
+            if (response.status === 'success') {
+              $('#statusMessage').html('<div class="alert alert-success">Message sent successfully!</div>');
+              $('#contactForm')[0].reset(); // Clear the form
+            } else {
+              $('#statusMessage').html('<div class="alert alert-danger">Error: ' + response.message + '</div>');
+            }
+          },
+          error: function(xhr, status, error) {
+            $('#statusMessage').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
