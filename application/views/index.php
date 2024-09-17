@@ -769,22 +769,18 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">Initiate Your Project</h4>
-            <form action="#" class="row">
+            <form action="send_email.php" method="POST" class="row">
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="First Name" id="inputFirstName"
-                  class="shadow form-control form-control-lg">
+                <input type="text" name="first_name" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="Last Name" id="inputLastName"
-                  class="shadow form-control form-control-lg">
+                <input type="text" name="last_name" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <input type="email" placeholder="Email Address" id="inputEmail"
-                  class="shadow form-control form-control-lg">
+                <input type="email" name="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="Message" id="message" rows="8"
-                  class="shadow form-control form-control-lg"></textarea>
+                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
               </div>
               <div class="text-center d-grid mt-1">
                 <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
@@ -793,6 +789,37 @@
                 </button>
               </div>
             </form>
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              // Get form data
+              $firstName = htmlspecialchars($_POST['first_name']);
+              $lastName = htmlspecialchars($_POST['last_name']);
+              $email = htmlspecialchars($_POST['email']);
+              $message = htmlspecialchars($_POST['message']);
+
+              // Set the recipient email address
+              $to = 'webforgecreative@gmail.com';
+
+              // Set the email subject
+              $subject = 'Contact Form Submission';
+
+              // Create the email body
+              $body = "First Name: $firstName\n";
+              $body .= "Last Name: $lastName\n";
+              $body .= "Email: $email\n";
+              $body .= "Message:\n$message";
+
+              // Set email headers
+              $headers = "From: $email";
+
+              // Send the email
+              if (mail($to, $subject, $body, $headers)) {
+                echo 'Thank you for your message. It has been sent.';
+              } else {
+                echo 'Sorry, something went wrong. Please try again.';
+              }
+            }
+            ?>
           </div>
         </div>
       </div>
