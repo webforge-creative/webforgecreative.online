@@ -769,18 +769,18 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">Initiate Your Project</h4>
-            <form id="contactForm" action="#" method="POST" class="row">
+            <form id="contactForm" class="row">
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" name="first_name" id="inputFirstName" placeholder="First Name" class="shadow form-control form-control-lg">
+                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" name="last_name" id="inputLastName" placeholder="Last Name" class="shadow form-control form-control-lg">
+                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <input type="email" name="email" id="inputEmail" placeholder="Email Address" class="shadow form-control form-control-lg">
+                <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg">
               </div>
               <div class="col-lg-12 mb-3">
-                <textarea name="message" id="message" placeholder="Message" rows="8" class="shadow form-control form-control-lg"></textarea>
+                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
               </div>
               <div class="text-center d-grid mt-1">
                 <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
@@ -790,8 +790,8 @@
               </div>
             </form>
 
-            <!-- Area to display status message -->
-            <div id="statusMessage"></div>
+            <!-- Include SweetAlert2 -->
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           </div>
         </div>
       </div>
@@ -967,39 +967,46 @@
 }); 
     
     </script> -->
+  <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('#contactForm').on('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
+      $('#contactForm').submit(function(e) {
+        e.preventDefault();
 
-        // Capture form data
-        var formData = {
-          first_name: $('#inputFirstName').val(),
-          last_name: $('#inputLastName').val(),
-          email: $('#inputEmail').val(),
-          message: $('#message').val()
-        };
+        // Get form data
+        var firstName = $('#inputFirstName').val();
+        var lastName = $('#inputLastName').val();
+        var email = $('#inputEmail').val();
+        var message = $('#message').val();
 
-        // Clear previous status messages
-        $('#statusMessage').html('');
-
-        // Perform AJAX request
+        // Send AJAX request
         $.ajax({
-          url: '<?php echo site_url("Contact/submit_ajax"); ?>', // Controller URL for AJAX submission
+          url: '<?= base_url('contact/send_email') ?>',
           type: 'POST',
-          data: formData,
-          dataType: 'json',
-          success: function(response) {
-            if (response.status === 'success') {
-              $('#statusMessage').html('<div class="alert alert-success">Message sent successfully!</div>');
-              $('#contactForm')[0].reset(); // Clear the form
-            } else {
-              $('#statusMessage').html('<div class="alert alert-danger">Error: ' + response.message + '</div>');
-            }
+          data: {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            message: message
           },
-          error: function(xhr, status, error) {
-            $('#statusMessage').html('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
+          success: function(response) {
+            if (response == 'success') {
+              Swal.fire({
+                title: 'Email Sent!',
+                text: 'Your message has been sent successfully.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+              });
+            } else {
+              Swal.fire({
+                title: 'Error!',
+                text: 'Failed to send the email. Please try again later.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
+            }
           }
         });
       });

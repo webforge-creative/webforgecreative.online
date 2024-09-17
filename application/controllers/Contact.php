@@ -12,45 +12,25 @@ class Contact extends CI_Controller
 
     public function send_email()
     {
-        // Set email configuration
         $this->load->library('email');
-        $this->email->from('webforgecreative@gmail.com', 'Your Name');
-        $this->email->to('aptechstudent48@gmail.com');
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
 
-        if ($this->email->send()) {
-            echo 'Email sent.';
-        } else {
-            echo 'Failed to send email.';
-        }
-    }
-
-    public function submit_ajax()
-    {
-        // Collect form data
-        $first_name = $this->input->post('first_name');
-        $last_name = $this->input->post('last_name');
+        // Get POST data from AJAX
+        $firstName = $this->input->post('firstName');
+        $lastName = $this->input->post('lastName');
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
-        // Validation (optional, add more checks as needed)
-        if (empty($first_name) || empty($last_name) || empty($email) || empty($message)) {
-            echo json_encode(['status' => 'error', 'message' => 'All fields are required']);
-            return;
-        }
+        // Email configuration
+        $this->email->from($email, $firstName . ' ' . $lastName);
+        $this->email->to('webforgecreative@gmail.com');
+        $this->email->subject('Contact Form Message');
+        $this->email->message($message);
 
-        // Set up the email (using GMass SMTP)
-        $this->email->from($email, $first_name . ' ' . $last_name);
-        $this->email->to('webforgecreative@gmail.com');  // Replace with your email address
-        $this->email->subject('Contact Form Submission');
-        $this->email->message("First Name: $first_name\nLast Name: $last_name\nEmail: $email\n\nMessage:\n$message");
-
-        // Send email
+        // Send email and return response to AJAX
         if ($this->email->send()) {
-            echo json_encode(['status' => 'success', 'message' => 'Email sent successfully']);
+            echo 'success';
         } else {
-            echo json_encode(['status' => 'error', 'message' => $this->email->print_debugger()]);
+            echo 'error';
         }
     }
 }
