@@ -10,6 +10,22 @@ class Contact extends CI_Controller
         $this->load->library('email');  // Load the email library
     }
 
+    public function test()
+    {
+        // Set email configuration
+        $this->load->library('email');
+        $this->email->from('webforgecreative@gmail.com', 'Your Name');
+        $this->email->to('aptechstudent48@gmail.com');
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+
+        if ($this->email->send()) {
+            echo 'Email sent.';
+        } else {
+            echo 'Failed to send email.';
+        }
+    }
+
     public function send_email()
     {
         $this->load->library('email');
