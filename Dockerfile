@@ -10,15 +10,12 @@ RUN a2enmod rewrite
 # Set the working directory inside the container
 WORKDIR /var/www/html
 
-# Copy the CodeIgniter application files
-COPY . /var/www/html/
+# Copy your CodeIgniter 3 application files to the container
+COPY . /var/www/html
 
-# Set correct permissions for CodeIgniter's writable directories
-RUN chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs && \
-    chmod -R 777 /var/www/html/application/cache /var/www/html/application/logs
-
-# Configure Apache to handle clean URLs
-COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
+# Set correct permissions for CodeIgniter's writable directory
+RUN chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs
+RUN chmod -R 777 /var/www/html/application/cache /var/www/html/application/logs
 
 # Expose the default Apache port
 EXPOSE 80
