@@ -988,7 +988,7 @@
 
         // Perform AJAX request
         $.ajax({
-          url: '<?php echo site_url("contact/submit_ajax"); ?>', // Controller URL for AJAX submission
+          url: '<?php echo site_url("Contact/submit_ajax"); ?>', // Controller URL for AJAX submission
           type: 'POST',
           data: formData,
           dataType: 'json',
