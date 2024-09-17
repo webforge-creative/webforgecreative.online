@@ -36,18 +36,29 @@ class Contact extends CI_Controller
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
-        // Email configuration
-        $this->email->from($email, $firstName . ' ' . $lastName);
-        $this->email->to('webforgecreative@gmail.com');
+        // Email to your address with the user's message
+        $this->email->from('webforgecreative@gmail.com', 'WebForge Creative'); // Verified sender address
+        $this->email->to('webforgecreative@gmail.com'); // Your email address
+        $this->email->reply_to($email); // User's email address as reply-to
         $this->email->subject('Contact Form Message');
-        $this->email->message($message);
+        $this->email->message("From: $firstName $lastName ($email)\n\n$message");
 
-        // Enable debugging
-        $this->email->print_debugger();
-
-        // Send email and return response to AJAX
+        // Send email to you and check for success
         if ($this->email->send()) {
-            echo 'success';
+            // Send confirmation email to the user
+            $this->email->clear(); // Clear previous email settings
+
+            $this->email->from('webforgecreative@gmail.com', 'WebForge Creative'); // Verified sender address
+            $this->email->to($email); // User's email address
+            $this->email->subject('We Have Received Your Message');
+            $this->email->message("Hi $firstName $lastName,\n\nThank you for contacting us. We have received your message and our team will get back to you as soon as possible.\n\nBest regards,\nWebForge Creative");
+
+            // Send confirmation email and return response to AJAX
+            if ($this->email->send()) {
+                echo 'success';
+            } else {
+                echo 'error';
+            }
         } else {
             echo 'error';
         }
