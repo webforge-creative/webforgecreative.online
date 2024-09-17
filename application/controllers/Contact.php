@@ -8,9 +8,24 @@ class Contact extends CI_Controller {
         $this->load->library('email');  // Load the email library
     }
 
-    public function test(){
-        echo "hello";
-    }
+    public function send_email() {
+        // Load the email library
+        $this->load->library('email');
+        
+        // Set email preferences
+        $this->email->from('webforgecreative@gmail.com', 'Your Name');
+        $this->email->to('recipient-email@example.com');
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
+    
+        // Send email
+        if ($this->email->send()) {
+            echo 'Email sent.';
+        } else {
+            echo 'Failed to send email.';
+            show_error($this->email->print_debugger());
+        }
+    }    
 
     public function submit_ajax() {
         // Collect form data
