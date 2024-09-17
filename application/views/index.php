@@ -771,16 +771,16 @@
             <h4 class="display-3--title mb-5">Initiate Your Project</h4>
             <form id="contactForm" class="row">
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg">
+                <input type="text" placeholder="First Name" id="inputFirstName" class="shadow form-control form-control-lg" required>
               </div>
               <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg">
+                <input type="text" placeholder="Last Name" id="inputLastName" class="shadow form-control form-control-lg" required>
               </div>
               <div class="col-lg-12 mb-3">
-                <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg">
+                <input type="email" placeholder="Email Address" id="inputEmail" class="shadow form-control form-control-lg" required>
               </div>
               <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+                <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" required></textarea>
               </div>
               <div class="text-center d-grid mt-1">
                 <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
@@ -789,9 +789,6 @@
                 </button>
               </div>
             </form>
-
-            <!-- Include SweetAlert2 -->
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
           </div>
         </div>
       </div>
@@ -969,7 +966,10 @@
     </script> -->
   <script src="<?= base_url() ?>assets/js/bootstrap.bundle.min.js"></script>
 
+  <!-- Include jQuery and SweetAlert2 -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <script>
     $(document).ready(function() {
       $('#contactForm').submit(function(e) {
@@ -983,7 +983,7 @@
 
         // Send AJAX request
         $.ajax({
-          url: '<?= base_url('Contact/send_email') ?>',
+          url: '<?= base_url('contact/send_email') ?>',
           type: 'POST',
           data: {
             firstName: firstName,
@@ -999,6 +999,7 @@
                 icon: 'success',
                 confirmButtonText: 'OK'
               });
+              $('#contactForm')[0].reset(); // Reset form fields
             } else {
               Swal.fire({
                 title: 'Error!',
