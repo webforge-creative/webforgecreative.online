@@ -37,11 +37,13 @@ class Contact extends CI_Controller
         $message = $this->input->post('message');
 
         // Email configuration
-        $this->email->from('webforgecreative@gmail.com', 'WebForge Creative'); // Use a verified sender address
-        $this->email->to('webforgecreative@gmail.com'); // Your email address
-        $this->email->reply_to($email); // Set the user's email address as reply-to
+        $this->email->from($email, $firstName . ' ' . $lastName);
+        $this->email->to('webforgecreative@gmail.com');
         $this->email->subject('Contact Form Message');
-        $this->email->message("From: $firstName $lastName ($email)\n\n$message");
+        $this->email->message($message);
+
+        // Enable debugging
+        $this->email->print_debugger();
 
         // Send email and return response to AJAX
         if ($this->email->send()) {
