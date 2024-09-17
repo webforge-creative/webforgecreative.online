@@ -1,0 +1,39 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect www to non-www (optional for SEO)
+    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # Redirect HTTP to HTTPS (optional for SEO)
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Remove index.php from URL
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.php/$1 [L]
+
+    # Set proper caching headers (optional for SEO and performance)
+    <IfModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access plus 1 month"
+        ExpiresByType image/jpg "access plus 1 year"
+        ExpiresByType image/jpeg "access plus 1 year"
+        ExpiresByType image/gif "access plus 1 year"
+        ExpiresByType image/png "access plus 1 year"
+        ExpiresByType text/css "access plus 1 month"
+        ExpiresByType application/javascript "access plus 1 month"
+    </IfModule>
+
+    # Set security headers (optional)
+    <IfModule mod_headers.c>
+        Header set X-Content-Type-Options "nosniff"
+        Header set X-XSS-Protection "1; mode=block"
+        Header always set Referrer-Policy "no-referrer-when-downgrade"
+        Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+    </IfModule>
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes
