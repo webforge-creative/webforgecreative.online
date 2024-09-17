@@ -37,7 +37,7 @@ class Contact extends CI_Controller
         $message = $this->input->post('message');
 
         // Email configuration
-        $this->email->from($email, $firstName . ' ' . $lastName);
+        $this->email->from('webforgecreative@gmail.com', 'Your Name');
         $this->email->to('webforgecreative@gmail.com');
         $this->email->subject('Contact Form Message');
         $this->email->message($message);
