@@ -932,7 +932,6 @@
             <div class="footer-bottom__copyright">
               &COPY; Copyright 2024 <a href="#">WebForge Creative</a> | Designed by <a href="#">Team WebForge
                 Creative</a>
-
             </div>
           </div>
         </div>
