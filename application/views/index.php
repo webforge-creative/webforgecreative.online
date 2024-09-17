@@ -983,7 +983,7 @@
 
         // Send AJAX request
         $.ajax({
-          url: '<?= base_url('contact/send_email') ?>',
+          url: '<?= base_url('Contact/send_email') ?>',
           type: 'POST',
           data: {
             firstName: firstName,
