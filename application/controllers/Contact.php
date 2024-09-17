@@ -28,22 +28,12 @@ class Contact extends CI_Controller
 
     public function send_email()
     {
+        // Set email configuration
         $this->load->library('email');
-
-        // Get POST data from AJAX
-        $firstName = $this->input->post('firstName');
-        $lastName = $this->input->post('lastName');
-        $email = $this->input->post('email');
-        $message = $this->input->post('message');
-
-        // Email configuration
         $this->email->from('webforgecreative@gmail.com', 'Your Name');
-        $this->email->to('webforgecreative@gmail.com');
-        $this->email->subject('Contact Form Message');
-        $this->email->message($message);
-
-        // Enable debugging
-        $this->email->print_debugger();
+        $this->email->to('aptechstudent48@gmail.com');
+        $this->email->subject('Email Test');
+        $this->email->message('Testing the email class.');
 
         // Send email and return response to AJAX
         if ($this->email->send()) {
