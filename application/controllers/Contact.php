@@ -26,6 +26,9 @@ class Contact extends CI_Controller
         $this->email->subject('Contact Form Message');
         $this->email->message($message);
 
+        // Enable debugging
+        $this->email->print_debugger();
+
         // Send email and return response to AJAX
         if ($this->email->send()) {
             echo 'success';
