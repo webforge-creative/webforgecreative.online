@@ -8,38 +8,6 @@ class Contact extends CI_Controller {
         $this->load->library('email');  // Load the email library
     }
 
-    public function send_email() {
-        // Set email configuration
-        $config = array(
-            'protocol'  => 'smtp',
-            'smtp_host' => 'smtp.gmail.com',
-            'smtp_port' => 587,
-            'smtp_user' => 'webforgecreative@gmail.com',
-            'smtp_pass' => 'lxwp ycqf klze ihzy',
-            'mailtype'  => 'html',
-            'charset'   => 'iso-8859-1',
-            'wordwrap'  => TRUE,
-            'smtp_crypto' => 'tls'
-        );
-
-        // Initialize email library with configuration
-        $this->email->initialize($config);
-
-        // Set email parameters
-        $this->email->from('webforgecreative@gmail.com', 'Your Name');
-        $this->email->to('recipient-email@example.com');
-        $this->email->subject('Email Test');
-        $this->email->message('Testing the email class.');
-
-        // Send email
-        if ($this->email->send()) {
-            echo 'Email sent.';
-        } else {
-            echo 'Failed to send email.';
-            show_error($this->email->print_debugger());
-        }
-    }   
-
     public function submit_ajax() {
         // Collect form data
         $first_name = $this->input->post('first_name');
