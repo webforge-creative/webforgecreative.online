@@ -14,8 +14,8 @@ class Contact extends CI_Controller {
             'protocol'  => 'smtp',
             'smtp_host' => 'smtp.gmail.com',
             'smtp_port' => 587,
-            'smtp_user' => 'your-email@gmail.com',
-            'smtp_pass' => 'your-email-password',
+            'smtp_user' => 'webforgecreative@gmail.com',
+            'smtp_pass' => 'lxwp ycqf klze ihzy',
             'mailtype'  => 'html',
             'charset'   => 'iso-8859-1',
             'wordwrap'  => TRUE,
@@ -26,7 +26,7 @@ class Contact extends CI_Controller {
         $this->email->initialize($config);
 
         // Set email parameters
-        $this->email->from('your-email@gmail.com', 'Your Name');
+        $this->email->from('webforgecreative@gmail.com', 'Your Name');
         $this->email->to('recipient-email@example.com');
         $this->email->subject('Email Test');
         $this->email->message('Testing the email class.');
