@@ -28,17 +28,7 @@ class Contact extends CI_Controller
 
     public function send_email()
     {
-        // Load email library and configuration
         $this->load->library('email');
-        $config['protocol'] = 'smtp';
-        $config['smtp_host'] = 'in-v3.mailjet.com'; // Mailjet SMTP server
-        $config['smtp_port'] = 587; // Mailjet SMTP port
-        $config['smtp_user'] = 'c18134d7c5be01c9a506607401235c3c'; // Your Mailjet API key
-        $config['smtp_pass'] = '383f2509c47ee03905397d79bb2c28f0'; // Your Mailjet secret key
-        $config['mailtype'] = 'html';
-        $config['charset']  = 'utf-8';
-        $config['wordwrap'] = TRUE;
-        $this->email->initialize($config);
 
         // Get POST data from AJAX
         $firstName = $this->input->post('firstName');
@@ -46,17 +36,18 @@ class Contact extends CI_Controller
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
-        // Set email parameters
-        $this->email->from($email, $firstName . ' ' . $lastName);
+        // Email configuration
+        $this->email->from('webforgecreative@gmail.com', 'WebForge Creative'); // Use a verified sender address
         $this->email->to('webforgecreative@gmail.com'); // Your email address
+        $this->email->reply_to($email); // Set the user's email address as reply-to
         $this->email->subject('Contact Form Message');
-        $this->email->message($message);
+        $this->email->message("From: $firstName $lastName ($email)\n\n$message");
 
-        // Send email and check for success
+        // Send email and return response to AJAX
         if ($this->email->send()) {
             echo 'success';
         } else {
-            echo $this->email->print_debugger(); // Print email debug information
+            echo 'error';
         }
     }
 }
