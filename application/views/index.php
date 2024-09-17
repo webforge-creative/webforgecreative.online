@@ -790,8 +790,8 @@
               </div>
             </form>
 
-            <div id="statusMessage"></div> <!-- Display success/failure message -->
-
+            <!-- Area to display status message -->
+            <div id="statusMessage"></div>
           </div>
         </div>
       </div>
@@ -973,7 +973,7 @@
   <script>
     $(document).ready(function() {
       $('#contactForm').on('submit', function(e) {
-        e.preventDefault(); // Prevent the form from submitting the traditional way
+        e.preventDefault(); // Prevent the default form submission
 
         // Capture form data
         var formData = {
@@ -983,9 +983,12 @@
           message: $('#message').val()
         };
 
+        // Clear previous status messages
+        $('#statusMessage').html('');
+
         // Perform AJAX request
         $.ajax({
-          url: '<?php echo site_url("contact/submit_ajax"); ?>', // Controller URL
+          url: '<?php echo site_url("contact/submit_ajax"); ?>', // Controller URL for AJAX submission
           type: 'POST',
           data: formData,
           dataType: 'json',
