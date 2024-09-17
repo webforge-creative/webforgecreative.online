@@ -769,7 +769,7 @@
         <div class="col-12 col-lg-6 bg-white shadow p-3">
           <div class="form w-100 pb-2">
             <h4 class="display-3--title mb-5">Initiate Your Project</h4>
-            <form id="contactForm" class="row">
+            <form id="contactForm" action="#" method="POST" class="row">
               <div class="col-lg-6 col-md mb-3">
                 <input type="text" name="first_name" id="inputFirstName" placeholder="First Name" class="shadow form-control form-control-lg">
               </div>
