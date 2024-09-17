@@ -1,4 +1,19 @@
 {
   "schemaVersion": 2,
-  "templateId": "php/7.4"
+  "templateId": "php/7.4",
+  "nginx": {
+    "server": {
+      "listen": 80,
+      "server_name": "webforgecreative.online",
+      "root": "/app/www",
+      "location": {
+        "/": {
+          "try_files": "$uri $uri/ /index.php?$args"
+        },
+        "/index.php": {
+          "try_files": "$uri /index.php?$args"
+        }
+      }
+    }
+  }
 }
