@@ -14,7 +14,7 @@ class Contact extends CI_Controller
     {
         // Set email configuration
         $this->load->library('email');
-        $this->email->from('webforgecreative@gmail', 'Your Name');
+        $this->email->from('webforgecreative@gmail.com', 'Your Name');
         $this->email->to('aptechstudent48@gmail.com');
         $this->email->subject('Email Test');
         $this->email->message('Testing the email class.');
