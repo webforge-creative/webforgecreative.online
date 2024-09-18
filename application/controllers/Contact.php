@@ -37,24 +37,13 @@ class Contact extends CI_Controller
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
-        $this->email->initialize(array(
-            'protocol' => 'smtp',
-            'smtp_host' => 'in-v3.mailjet.com',
-            'smtp_port' => 587,
-            'smtp_user' => 'c18134d7c5be01c9a506607401235c3c',
-            'smtp_pass' => '383f2509c47ee03905397d79bb2c28f0',
-            'mailtype' => 'html',
-            'charset' => 'utf-8',
-            'wordwrap' => TRUE
-        ));
-
         // Prepare data for Mailjet API
         $postData = array(
             'Messages' => array(
                 array(
                     'From' => array(
-                        'Email' => "webforgecreative@gmail.com",
-                        'Name' => "WebForge Creative"
+                        'Email' => 'webforgecreative@gmail.com',
+                        'Name' => 'WebForge Creative'
                     ),
                     'To' => array(
                         array(
@@ -62,7 +51,7 @@ class Contact extends CI_Controller
                             'Name' => 'WebForge Creative'
                         )
                     ),
-                    'TemplateID' => 'YOUR_TEMPLATE_ID_FOR_RECEIVING_MESSAGES',
+                    'TemplateID' => '6300296',
                     'TemplateLanguage' => true,
                     'Subject' => 'Contact Form Message',
                     'Variables' => array(
@@ -75,7 +64,7 @@ class Contact extends CI_Controller
             )
         );
 
-        // Send email to you
+        // Initialize cURL
         $ch = curl_init('https://api.mailjet.com/v3.1/send');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, true);
@@ -85,9 +74,14 @@ class Contact extends CI_Controller
             'Authorization: Basic ' . base64_encode('c18134d7c5be01c9a506607401235c3c:383f2509c47ee03905397d79bb2c28f0')
         ));
         $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
-        if (strpos($response, '"Status":"success"') !== false) {
+        // Decode response
+        $responseData = json_decode($response, true);
+
+        // Check if the response contains success status
+        if ($httpCode == 200 && isset($responseData['Messages'][0]['Status']) && $responseData['Messages'][0]['Status'] == 'success') {
             // Send confirmation email to the user
             $postData['Messages'][0]['To'] = array(array(
                 'Email' => $email,
@@ -106,9 +100,13 @@ class Contact extends CI_Controller
                 'Authorization: Basic ' . base64_encode('c18134d7c5be01c9a506607401235c3c:383f2509c47ee03905397d79bb2c28f0')
             ));
             $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             curl_close($ch);
 
-            if (strpos($response, '"Status":"success"') !== false) {
+            // Decode response
+            $responseData = json_decode($response, true);
+
+            if ($httpCode == 200 && isset($responseData['Messages'][0]['Status']) && $responseData['Messages'][0]['Status'] == 'success') {
                 echo 'success';
             } else {
                 echo 'error';
