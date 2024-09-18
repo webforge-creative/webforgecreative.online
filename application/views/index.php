@@ -321,7 +321,7 @@
               We’ll expand our network through partnerships and events,
               with analytics and feedback driving ongoing improvements.
             </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" class="rounded-pill btn-rounded border-sucess">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
@@ -349,7 +349,7 @@
               we ensure secure, scalable sites that enhance engagement and meet business goals,
               with continuous updates based on feedback.
             </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" class="rounded-pill btn-rounded border-sucess">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
@@ -367,7 +367,7 @@
               by distributing resources across multiple servers. Enjoy enhanced performance, robust security,
               and cost-effective pricing, with payment based on actual resource usage.
             </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" class="rounded-pill btn-rounded border-sucess">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
@@ -614,10 +614,10 @@
       <!-- FILTER BUTTONS  -->
       <div class="row mt-5 mb-4 g-3 text-center">
         <div class="col-md-12">
-          <button class="btn btn-outline-primary" type="button">All</button>
-          <button class="btn btn-outline-primary" type="button">websites</button>
-          <button class="btn btn-outline-primary" type="button">design</button>
-          <button class="btn btn-outline-primary" type="button">mockup</button>
+          <button class="btn btn-outline-sucess" type="button">All</button>
+          <button class="btn btn-outline-sucess" type="button">websites</button>
+          <button class="btn btn-outline-sucess" type="button">design</button>
+          <button class="btn btn-outline-sucess" type="button">mockup</button>
         </div>
       </div>
 
@@ -783,7 +783,7 @@
                 <textarea name="message" placeholder="Message" id="message" rows="8" class="shadow form-control form-control-lg" required></textarea>
               </div>
               <div class="text-center d-grid mt-1">
-                <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+                <button type="submit" class="btn btn-sucess rounded-pill pt-3 pb-3">
                   Submit
                   <i class="fas fa-paper-plane"></i>
                 </button>
@@ -937,11 +937,11 @@
 
 
   <!-- BACK TO TOP BUTTON  -->
-  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <a href="#" class="shadow btn-sucess rounded-circle back-to-top">
     <i class="fas fa-chevron-up"></i>
   </a>
 
-  <a href="https://wa.me/+923113633344" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/+923113633344" class="shadow btn-sucess rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
