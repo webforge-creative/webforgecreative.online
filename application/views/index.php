@@ -25,10 +25,6 @@
   <!-- ICO Favicon for broader compatibility -->
   <link rel="icon" href="https://www.webforgecreative.online/assets/images/favicons/favicon.ico" type="image/x-icon">
 
-  <!-- Android Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="https://www.webforgecreative.online/assets/images/favicons/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="https://www.webforgecreative.online/assets/images/favicons/android-chrome-512x512.png">
-
   <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" href="https://www.webforgecreative.online/assets/images/favicons/apple-touch-icon.png">
 
