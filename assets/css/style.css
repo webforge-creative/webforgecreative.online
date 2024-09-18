@@ -11028,7 +11028,7 @@ textarea.form-control-lg {
 }
 .portfolio-box img {
   width: 100%;
-  height: 100%;
+  height: 100%; 
 }
 .portfolio-box .portfolio-info {
   background-color: rgba(51, 204, 204, 0.75);
