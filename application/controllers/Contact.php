@@ -37,6 +37,17 @@ class Contact extends CI_Controller
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
+        $this->email->initialize(array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'in-v3.mailjet.com',
+            'smtp_port' => 587,
+            'smtp_user' => 'c18134d7c5be01c9a506607401235c3c',
+            'smtp_pass' => '383f2509c47ee03905397d79bb2c28f0',
+            'mailtype' => 'html',
+            'charset' => 'utf-8',
+            'wordwrap' => TRUE
+        ));
+
         // Prepare data for Mailjet API
         $postData = array(
             'Messages' => array(
