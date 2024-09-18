@@ -28,7 +28,6 @@ class Contact extends CI_Controller
 
     public function send_email()
     {
-        // Load the Mailjet library
         $this->load->library('email');
 
         // Get POST data from AJAX
@@ -37,76 +36,83 @@ class Contact extends CI_Controller
         $email = $this->input->post('email');
         $message = $this->input->post('message');
 
-        // Prepare data for Mailjet API
-        $postData = array(
-            'Messages' => array(
-                array(
-                    'From' => array(
-                        'Email' => 'webforgecreative@gmail.com',
-                        'Name' => 'WebForge Creative'
-                    ),
-                    'To' => array(
-                        array(
-                            'Email' => 'webforgecreative@gmail.com',
-                            'Name' => 'WebForge Creative'
-                        )
-                    ),
-                    'TemplateID' => '6300296',
-                    'TemplateLanguage' => true,
-                    'Subject' => 'Contact Form Message',
-                    'Variables' => array(
-                        'FIRST_NAME' => $firstName,
-                        'LAST_NAME' => $lastName,
-                        'EMAIL' => $email,
-                        'MESSAGE' => $message
-                    )
-                )
-            )
-        );
+        // Email to your address with the user's message
+        $this->email->from('webforgecreative@gmail.com', 'WebForge Creative');
+        $this->email->to('webforgecreative@gmail.com');
+        $this->email->reply_to($email);
+        $this->email->subject('Contact Form Message');
 
-        // Initialize cURL
-        $ch = curl_init('https://api.mailjet.com/v3.1/send');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Authorization: Basic ' . base64_encode('c18134d7c5be01c9a506607401235c3c:383f2509c47ee03905397d79bb2c28f0')
-        ));
-        $response = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
+        $messageToYou = "
+    <html>
+    <head>
+        <style>
+            body { font-family: Arial, sans-serif; color: #333; }
+            .container { width: 80%; margin: 0 auto; }
+            .header { background-color: #007BFF; color: #fff; padding: 20px; text-align: center; }
+            .content { padding: 20px; }
+            .footer { background-color: #f1f1f1; color: #333; text-align: center; padding: 10px; }
+        </style>
+    </head>
+    <body>
+        <div class='container'>
+            <div class='header'>
+                <h1>New Contact Form Message</h1>
+            </div>
+            <div class='content'>
+                <p><strong>From:</strong> $firstName $lastName ($email)</p>
+                <p><strong>Message:</strong></p>
+                <p>$message</p>
+            </div>
+            <div class='footer'>
+                <p>&copy; 2024 WebForge Creative. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+    </html>";
 
-        // Decode response
-        $responseData = json_decode($response, true);
+        $this->email->message($messageToYou);
 
-        // Check if the response contains success status
-        if ($httpCode == 200 && isset($responseData['Messages'][0]['Status']) && $responseData['Messages'][0]['Status'] == 'success') {
+        // Send email to you and check for success
+        if ($this->email->send()) {
             // Send confirmation email to the user
-            $postData['Messages'][0]['To'] = array(array(
-                'Email' => $email,
-                'Name' => $firstName . ' ' . $lastName
-            ));
-            $postData['Messages'][0]['TemplateID'] = '6300296';
-            $postData['Messages'][0]['Subject'] = 'We Have Received Your Message';
+            $this->email->clear(); // Clear previous email settings
 
-            // Send confirmation email
-            $ch = curl_init('https://api.mailjet.com/v3.1/send');
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($postData));
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Authorization: Basic ' . base64_encode('c18134d7c5be01c9a506607401235c3c:383f2509c47ee03905397d79bb2c28f0')
-            ));
-            $response = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-            curl_close($ch);
+            $this->email->from('webforgecreative@gmail.com', 'WebForge Creative');
+            $this->email->to($email);
+            $this->email->subject('We Have Received Your Message');
 
-            // Decode response
-            $responseData = json_decode($response, true);
+            $messageToUser = "
+        <html>
+        <head>
+            <style>
+                body { font-family: Arial, sans-serif; color: #333; }
+                .container { width: 80%; margin: 0 auto; }
+                .header { background-color: #007BFF; color: #fff; padding: 20px; text-align: center; }
+                .content { padding: 20px; }
+                .footer { background-color: #f1f1f1; color: #333; text-align: center; padding: 10px; }
+            </style>
+        </head>
+        <body>
+            <div class='container'>
+                <div class='header'>
+                    <h1>Thank You for Your Message!</h1>
+                </div>
+                <div class='content'>
+                    <p>Hi $firstName $lastName,</p>
+                    <p>Thank you for contacting WebForge Creative. We have received your message and our team will get back to you as soon as possible.</p>
+                    <p>Best regards,<br>WebForge Creative Team</p>
+                </div>
+                <div class='footer'>
+                    <p>&copy; 2024 WebForge Creative. All rights reserved.</p>
+                </div>
+            </div>
+        </body>
+        </html>";
 
-            if ($httpCode == 200 && isset($responseData['Messages'][0]['Status']) && $responseData['Messages'][0]['Status'] == 'success') {
+            $this->email->message($messageToUser);
+
+            // Send confirmation email and return response to AJAX
+            if ($this->email->send()) {
                 echo 'success';
             } else {
                 echo 'error';
