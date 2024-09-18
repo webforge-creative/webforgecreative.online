@@ -6,8 +6,8 @@
     padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
     font-weight: 700;
     margin: 0;
-    border: 0.1rem solid rgba($green, 0.6);
-    background-color: $green;
+    border: 0.1rem solid rgba($white, 0.6);
+    background-color: $white;
     display: block;
 
     span {
@@ -21,7 +21,7 @@
         border-radius: 50%;
 
         i {
-            color: $green;
+            color: $white;
             font-size: 1rem;
             line-height: 2.5rem;
         }
@@ -30,7 +30,7 @@
 
     &:hover {
         @include gradient;
-        color: $green;
+        color: $white;
 
         span {
             background-color: rgba($black, 0.6);
