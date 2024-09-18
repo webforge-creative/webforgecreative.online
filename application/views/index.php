@@ -403,8 +403,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Abdullah, CEO and founder of WebForge Creative, leads with a vision that
-                  drives innovation and excellence. His expertise ensures our projects are
+                  Abdullah, CEO and founder of WebForge Creative, His expertise ensures our projects are
                   both cutting-edge and user-centered, reflecting his commitment to transforming
                   client ideas into successful digital solutions.
                   <i class="fas fa-quote-right"></i>
