@@ -324,7 +324,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="<?= base_url() ?>assets/images/services/service-1.png" alt="marketing illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-1.png" style="width: 70%;" alt="marketing illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -332,7 +332,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
           <div class="services__pic">
-            <img src="<?= base_url() ?>assets/images/services/service-2.png" alt="web development illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-2.png" style="width: 70%;" alt="web development illustration" class="img-fluid">
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
@@ -370,7 +370,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="<?= base_url() ?>assets/images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/services/service-3.png" style="width: 70%;" alt="cloud hosting illustration" class="img-fluid">
           </div>
         </div>
       </div>
