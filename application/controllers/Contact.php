@@ -107,7 +107,7 @@ class Contact extends CI_Controller
                 </div>
             </div>
         </body>
-        </html>";
+        </html>"; 
 
             $this->email->message($messageToUser);
 
