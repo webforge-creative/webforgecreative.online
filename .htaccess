@@ -2,6 +2,10 @@
     RewriteEngine On
     RewriteBase /
 
+    # Redirect non-www to www
+    RewriteCond %{HTTP_HOST} ^webforgecreative\.online [NC]
+    RewriteRule ^(.*)$ https://www.webforgecreative.online/$1 [L,R=301]
+
     # Redirect Trailing Slashes...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
