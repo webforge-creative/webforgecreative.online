@@ -279,7 +279,7 @@
   <section id="services" class="services">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold">Our Services</h1>
+        <h2 class="display-3 fw-bold">Our Services</h2>
         <div class="heading-line mb-1"></div>
       </div>
       <!-- START THE DESCRIPTION CONTENT  -->
@@ -390,7 +390,7 @@
     </svg>
     <div class="container">
       <div class="row text-center text-white">
-        <h1 class="display-3 fw-bold">Our Team</h1>
+        <h2 class="display-3 fw-bold">Our Team</h2>
         <hr style="width: 100px; height: 3px; " class="mx-auto">
         <p class="lead pt-1">WebForge Creative: Crafting Digital Brilliance, One Pixel at a Time!</p>
       </div>
@@ -513,7 +513,7 @@
   <section id="faq" class="faq">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold text-uppercase">FAQ</h1>
+        <h2 class="display-3 fw-bold text-uppercase">FAQ</h2>
         <div class="heading-line"></div>
         <p class="lead">Frequently Asked Questions: Discover Key Information Beforehand</p>
       </div>
@@ -602,7 +602,7 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="row text-center mt-5">
-        <h1 class="display-3 fw-bold text-capitalize">Latest work</h1>
+        <h2 class="display-3 fw-bold text-capitalize">Latest work</h2>
         <div class="heading-line"></div>
         <p class="lead">
           Explore Our Work: Showcasing Our Successful Projects and Innovative Solutions.
@@ -738,7 +738,7 @@
   <section id="contact" class="get-started">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold text-capitalize">Get Started with WebForge Creative</h1>
+        <h2 class="display-3 fw-bold text-capitalize">Get Started with WebForge Creative</h2>
         <div class="heading-line"></div>
         <p class="lh-lg">
           Ready to transform your digital presence? Contact us today to initiate your journey towards exceptional web
