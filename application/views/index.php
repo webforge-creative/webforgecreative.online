@@ -35,13 +35,13 @@
 
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="
-        default-src 'self'; 
-        script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://code.jquery.com; 
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
-        img-src 'self' data:; 
-        connect-src 'self' https://www.google-analytics.com; 
-        font-src 'self' https://fonts.gstatic.com;
-    ">
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://code.jquery.com; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
+    img-src 'self' data:; 
+    connect-src 'self' https://www.google-analytics.com; 
+    font-src 'self' https://fonts.gstatic.com;
+">
   <!-- Google Tag Manager -->
   <script src="https://www.googletagmanager.com/gtm.js?id=GTM-P2DVGCW2" defer></script>
   <!-- End Google Tag Manager -->
