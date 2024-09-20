@@ -1,17 +1,14 @@
 {
-  "schemaVersion": 2,
-  "dockerfileLines": [
-    "FROM php:7.4-apache",
-    "RUN apt-get update && apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev && \\
-        docker-php-ext-configure gd --with-freetype --with-jpeg && \\
-        docker-php-ext-install gd mysqli pdo pdo_mysql && \\
-        apt-get clean && rm -rf /var/lib/apt/lists/*",
-    "RUN a2enmod rewrite",
-    "WORKDIR /var/www/html",
-    "COPY . /var/www/html/",
-    "RUN chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs",
-    "RUN chmod -R 775 /var/www/html/application/cache /var/www/html/application/logs",
-    "EXPOSE 80",
-    "CMD [ \"apache2-foreground\" ]"
-  ]
+"schemaVersion": 2,
+"dockerfileLines": [
+"FROM php:7.4-apache",
+"RUN apt-get update && apt-get install -y libzip-dev && docker-php-ext-install zip && docker-php-ext-install mysqli pdo pdo_mysql mbstring curl",
+"RUN a2enmod rewrite",
+"WORKDIR /var/www/html",
+"COPY . /var/www/html/",
+"RUN chown -R www-data:www-data /var/www/html/application/cache /var/www/html/application/logs",
+"RUN chmod -R 755 /var/www/html/application/cache /var/www/html/application/logs",
+"EXPOSE 80",
+"CMD [ \"apache2-foreground\" ]"
+]
 }
