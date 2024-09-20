@@ -888,28 +888,28 @@
           <h5 class="text-capitalize fw-bold">Our Services</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">SEO Optimization</a></li>
-            <li><a href="#">Content Creation</a></li>
-            <li><a href="#">Cloud Hosting</a></li>
+            <li><a href="#services">Web Design</a></li>
+            <li><a href="#services">SEO Optimization</a></li>
+            <li><a href="#services">Content Creation</a></li>
+            <li><a href="#services">Cloud Hosting</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
           <h5 class="text-capitalize fw-bold">Quick Links</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="col-12 col-sm-6 col-lg-2 mb-4 mx-auto">
           <h5 class="text-capitalize fw-bold">Contact Us</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="#">info@webforgecreative.com</a></li>
-            <li><a href="#">+92 311 3633344</a></li>
+            <li><a href="mailto:info@webforgecreative.com">info@webforgecreative.com</a></li>
+            <li><a href="tel:+923113633344">+92 311 3633344</a></li>
             <li><a href="#">75050, Karachi</a></li>
             <li><a href="#">Karachi, Pakistan</a></li>
           </ul>
