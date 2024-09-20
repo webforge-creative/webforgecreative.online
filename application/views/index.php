@@ -21,16 +21,10 @@
   <!-- Basic Favicons -->
   <link rel="icon" type="image/png" sizes="16x16" href="https://www.webforgecreative.online/assets/images/favicons/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="https://www.webforgecreative.online/assets/images/favicons/favicon-32x32.png">
-
-  <!-- ICO Favicon for broader compatibility -->
   <link rel="icon" href="https://www.webforgecreative.online/assets/images/favicons/favicon.ico" type="image/x-icon">
-
-  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" href="https://www.webforgecreative.online/assets/images/favicons/apple-touch-icon.png">
-
-  <!-- Web Manifest -->
   <link rel="manifest" href="https://www.webforgecreative.online/assets/images/favicons/site.webmanifest">
-
+  
   <!-- Metadata for better SEO and branding -->
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
@@ -38,6 +32,9 @@
 
   <!-- Optimized Title for SEO and Click-Through Rate -->
   <title>WebForge Creative | Custom Web Development & Design</title>
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://code.jquery.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
 
   <!-- Google Tag Manager -->
   <script src="https://www.googletagmanager.com/gtm.js?id=GTM-P2DVGCW2" defer></script>
@@ -63,12 +60,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY32D0KFEN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
     gtag('config', 'G-MY32D0KFEN');
   </script>
 
