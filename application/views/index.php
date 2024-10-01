@@ -206,7 +206,7 @@
         <!-- START THE CONTENT FOR THE VIDEO -->
         <div class="col-md-6 intros text-end">
           <div class="video-box">
-            <img src="<?= base_url() ?>assets/images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+            <img src="<?= base_url() ?>assets/images/arts/intro-section-illustration.png" style="width: 98%;" alt="video illutration" class="img-fluid">
             <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
               <span>
                 <i class="fas fa-play-circle"></i>
