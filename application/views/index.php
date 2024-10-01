@@ -174,7 +174,7 @@
           </li>
         </ul>
         <button type="button" class="rounded-pill btn-rounded" style="padding: 10PX 50px 10px 10px;">
-          +92 311 3633344
+          +92 327 2048197
           <span>
             <i class="fas fa-phone-alt"></i>
           </span>
@@ -812,7 +812,7 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">+92 311 3633344</a>
+            <a href="#" class="contact-box__info--title">+92 327 2048197</a>
             <p class="contact-box__info--subtitle"> Mon-Fri 9am-6pm</p>
           </div>
         </div>
@@ -908,8 +908,8 @@
           <h5 class="text-capitalize fw-bold">Contact Us</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="mailto:info@webforgecreative.com">info@webforgecreative.com</a></li>
-            <li><a href="tel:+923113633344">+92 311 3633344</a></li>
+            <li><a href="mailto:webforgecreative@gmail.com">webforgecreative@gmail.com</a></li>
+            <li><a href="tel:+923272048197">+92 327 2048197</a></li>
             <li><a href="#">75050, Karachi</a></li>
             <li><a href="#">Karachi, Pakistan</a></li>
           </ul>
@@ -938,7 +938,7 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
-  <a href="https://wa.me/+923113633344" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/+923272048197" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
