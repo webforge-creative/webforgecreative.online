@@ -116,7 +116,7 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #00ccff, #00cc99);
+      background: linear-gradient(180deg, #cd2ee5, #9b26f0);
     }
 
     .logo {
@@ -174,7 +174,7 @@
           </li>
         </ul>
         <button type="button" class="rounded-pill btn-rounded" style="padding: 10PX 50px 10px 10px;">
-          +92 327 2048197
+          +92 311 3633344
           <span>
             <i class="fas fa-phone-alt"></i>
           </span>
@@ -384,13 +384,15 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////////-->
   <section id="testimonials" class="testimonials">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+      <path fill="#fff" fill-opacity="1"
+        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+      </path>
     </svg>
     <div class="container">
       <div class="row text-center text-white">
-        <h1 class="display-3 fw-bold">Testimonials</h1>
+        <h2 class="display-3 fw-bold">Our Team</h2>
         <hr style="width: 100px; height: 3px; " class="mx-auto">
-        <p class="lead pt-1">what our clients are saying</p>
+        <p class="lead pt-1">WebForge Creative: Crafting Digital Brilliance, One Pixel at a Time!</p>
       </div>
 
       <!-- START THE CAROUSEL CONTENT  -->
@@ -403,8 +405,9 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  Abdullah, CEO and founder of WebForge Creative, His expertise ensures our projects are
+                  both cutting-edge and user-centered, reflecting his commitment to transforming
+                  client ideas into successful digital solutions.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -417,11 +420,11 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
-                <h3>Patrick Muriungi</h3>
+                <h3>Abdullah</h3>
                 <p class="fw-light">CEO & founder</p>
               </div>
             </div>
@@ -431,8 +434,9 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  Salman, Co-Founder and President, is integral to the company’s
+                  strategic direction and success. He plays a crucial role in driving growth,
+                  managing operations, and steering key initiatives to achieve the company's goals.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -445,12 +449,12 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
-                <h3>Joy Marete</h3>
-                <p class="fw-light">Finance Manager</p>
+                <h3>Salman</h3>
+                <p class="fw-light">President & Co-Founder</p>
               </div>
             </div>
             <!-- CAROUSEL ITEM 3 -->
@@ -459,8 +463,9 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  Ahmed Raza, Co-Founder and COO, manages daily operations and enhances business efficiency.
+                  His foundational role was vital in starting the company, and he now ensures effective strategy
+                  execution.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -473,54 +478,32 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
-                <h3>ClaireBelle Zawadi</h3>
-                <p class="fw-light">Global brand manager</p>
+                <h3>Ahmed Raza</h3>
+                <p class="fw-light">COO & Co-Founder</p>
               </div>
             </div>
-            <!-- CAROUSEL ITEM 4 -->
-            <div class="carousel-item">
-              <!-- testimonials card  -->
-              <div class="testimonials__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              <!-- client picture  -->
-              <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="testimonials__name">
-                <h3>Uhuru Kenyatta</h3>
-                <p class="fw-light">C.E.O & Founder</p>
-              </div>
-            </div>
+
           </div>
-          <div class="text-center">
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            </button>
-            <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            </button>
-          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
+            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          </button>
+          <button class="btn btn-outline-light fas fa-long-arrow-alt-right" type="button"
+            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          </button>
         </div>
       </div>
     </div>
+    </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      <path fill="#fff" fill-opacity="1"
+        d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
     </svg>
   </section>
 
@@ -829,7 +812,7 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">+92 327 2048197</a>
+            <a href="#" class="contact-box__info--title">+92 311 3633344</a>
             <p class="contact-box__info--subtitle"> Mon-Fri 9am-6pm</p>
           </div>
         </div>
@@ -925,8 +908,8 @@
           <h5 class="text-capitalize fw-bold">Contact Us</h5>
           <hr class="bg-white d-inline-block mb-4" style="width: 60px; height: 2px;">
           <ul class="list-inline campany-list">
-            <li><a href="mailto:webforgecreative@gmail.com">webforgecreative@gmail.com</a></li>
-            <li><a href="tel:+923272048197">+92 327 2048197</a></li>
+            <li><a href="mailto:info@webforgecreative.com">info@webforgecreative.com</a></li>
+            <li><a href="tel:+923113633344">+92 311 3633344</a></li>
             <li><a href="#">75050, Karachi</a></li>
             <li><a href="#">Karachi, Pakistan</a></li>
           </ul>
@@ -955,7 +938,7 @@
     <i class="fas fa-chevron-up"></i>
   </a>
 
-  <a href="https://wa.me/+923272048197" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
+  <a href="https://wa.me/+923113633344" class="shadow btn-primary rounded-circle whatsapp-button" target="_blank" aria-label="Chat with us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
