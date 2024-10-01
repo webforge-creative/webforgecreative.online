@@ -403,8 +403,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  WebForge Creative transformed our vision into reality with a user-friendly app. Their team was professional, timely, and delivered beyond expectations. Highly recommended!
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -431,8 +430,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  Exceptional work by WebForge Creative! They developed a sleek and functional website for us, ensuring smooth user experience and top-notch quality.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -459,8 +457,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  Exceptional work by WebForge! They developed a sleek and functional website for us, ensuring smooth user experience and top-notch quality.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
@@ -487,8 +484,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae. Distinctio.
+                  WebForge Created created a dynamic web platform for our business that has significantly improved our online presence. Excellent work from start to finish!"
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
