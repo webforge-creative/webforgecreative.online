@@ -417,7 +417,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -445,7 +445,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -473,7 +473,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
@@ -501,7 +501,7 @@
               </div>
               <!-- client picture  -->
               <div class="testimonials__picture">
-                <img src="<?= base_url() ?>images/testimonials/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
+                <img src="<?= base_url() ?>assets/images/testimonials/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
               </div>
               <!-- client name & role  -->
               <div class="testimonials__name">
