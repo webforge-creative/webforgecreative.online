@@ -99,7 +99,7 @@
 
   <!-- Custom Scrollbar Styles -->
   <style>
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
       width: 12px;
     }
 
@@ -145,7 +145,7 @@
       .logo-fix {
         margin-top: 0 !important;
       }
-    }
+    } */
   </style>
 </head>
 
