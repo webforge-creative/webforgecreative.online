@@ -403,7 +403,7 @@
               <div class="testimonials__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
-                  WebForge Creative transformed our vision into reality with a user-friendly app. Their team was professional, timely, and delivered beyond expectations. Highly recommended!
+                  WebForge Creative transformed our vision into reality with a user-friendly app. Their team was professional, timely, and delivered beyond expectations.
                   <i class="fas fa-quote-right"></i>
                 <div class="ratings p-1">
                   <i class="fas fa-star"></i>
