@@ -116,7 +116,7 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: linear-gradient(180deg, #cd2ee5, #9b26f0);
+      background: linear-gradient(180deg, #00ccff, #00cc99);
     }
 
     .logo {
