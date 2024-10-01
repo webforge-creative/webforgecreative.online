@@ -36,7 +36,7 @@
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="
   default-src 'self'; 
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://code.jquery.com; 
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net https://code.jquery.com https://static.cloudflareinsights.com; 
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
   img-src 'self' data: https://www.googletagmanager.com; 
   connect-src 'self' https://www.google-analytics.com; 
